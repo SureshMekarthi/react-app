@@ -2,28 +2,25 @@ import { useState } from "react";
 import produce from "immer";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
+import ExpandableText from "./components/ExpandableText";
 function App() {
-  const [cart, setCart] = useState({
-    discount: 0.1,
-
-    items: [
-      { id: 1, title: "Prosuct1", quantity: 1 },
-      {
-        id: 2,
-        title: "Product2",
-        quantity: 1,
-      },
-    ],
-  });
-
-  const handleClick = () => {
-    setCart({
-      ...cart,
-      items: cart.items.map((item) =>
-        item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
-      ),
-    });
-  };
-  return <div></div>;
+  return (
+    <div>
+      <ExpandableText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat soluta
+        et recusandae cupiditate necessitatibus asperiores optio eaque quas,
+        animi vero nihil velit est cumque similique hic. Tempore nihil iure
+        velit autem vero hic optio, cupiditate officia unde porro, ducimus non,
+        placeat magnam vel molestiae ut laudantium quaerat exercitationem?
+        Reprehenderit placeat voluptate, perferendis aut consequuntur laborum
+        error aliquam dignissimos ipsam adipisci repudiandae ullam aspernatur
+        excepturi in, velit totam numquam explicabo accusamus ab? Placeat
+        ratione eligendi odit excepturi officiis perferendis dolore voluptatum
+        molestiae odio neque ipsum rem, cupiditate, ipsam provident a quas
+        voluptatibus, voluptate delectus ab officia! Voluptatum accusamus
+        laudantium dolor excepturi?
+      </ExpandableText>
+    </div>
+  );
 }
 export default App;
