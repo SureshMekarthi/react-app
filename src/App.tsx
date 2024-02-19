@@ -1,12 +1,9 @@
-import { useState } from "react";
-import produce from "immer";
-import NavBar from "./components/NavBar";
-import Cart from "./components/Cart";
-import ExpandableText from "./components/ExpandableText";
+import Form from "./components/Form";
+
 function App() {
   return (
     <div>
-      <ExpandableText maxChar={10}>Hello world</ExpandableText>
+      <Form></Form>
     </div>
   );
 }
