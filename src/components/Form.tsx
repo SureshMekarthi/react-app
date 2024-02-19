@@ -11,9 +11,14 @@ const Form = () => {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="" className="form-label"></label>
-        <input type="number" className="form-control"></input>
+        <label htmlFor="age" className="form-label">
+          Age
+        </label>
+        <input id="age" type="number" className="form-control"></input>
       </div>
+      <button className="btn btn-primary" type="submit">
+        Submit
+      </button>
     </form>
   );
 };
